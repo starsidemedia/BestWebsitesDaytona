@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Star, Zap, Trophy, Rocket } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image"; // Import Next.js Image component
 
 export default function PortfolioComponent() {
   const [selectedId, setSelectedId] = useState(null);
@@ -124,10 +125,12 @@ export default function PortfolioComponent() {
                       : "bg-black"
                   }`}
                 >
-                  <img
+                  <Image
                     src={business.logoUrl}
                     alt={business.businessName}
-                    className="w-full h-full object-contain p-4"
+                    layout="fill" // This ensures the image takes up the entire container
+                    objectFit="contain" // Keep aspect ratio while filling
+                    className="p-4"
                   />
                 </div>
                 <h2 className="text-xl font-bold mb-2">
@@ -144,6 +147,7 @@ export default function PortfolioComponent() {
           ))}
         </motion.div>
       </main>
+
       <AnimatePresence>
         {selectedId && (
           <motion.div
@@ -169,19 +173,12 @@ export default function PortfolioComponent() {
                 .map((business) => (
                   <div key={business.businessName}>
                     <div className="h-48 relative mb-4 rounded-md overflow-hidden">
-                      <img
+                      <Image
                         src={business.logoUrl}
                         alt={business.businessName}
-                        className={`w-full h-full object-contain p-4 ${
-                          [
-                            "Fixed By T",
-                            "Sam Boyd Real Estate",
-                            "PGX University",
-                            "Crystal Clean Blasting",
-                          ].includes(business.businessName)
-                            ? "bg-white"
-                            : "bg-black"
-                        }`}
+                        layout="fill"
+                        objectFit="contain"
+                        className="p-4"
                       />
                     </div>
                     <h2 className="text-3xl font-bold mb-2">
@@ -214,54 +211,6 @@ export default function PortfolioComponent() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <section className="container mx-auto py-16">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Why Choose Best Websites Daytona?
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg text-center"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Zap className="mx-auto h-12 w-12 text-yellow-400 mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Lightning Fast</h3>
-            <p>
-              Optimized for speed and performance, ensuring your site loads
-              instantly!
-            </p>
-          </motion.div>
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg text-center"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Trophy className="mx-auto h-12 w-12 text-yellow-400 mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Results Driven</h3>
-            <p>Proven track record of success with local Daytona businesses!</p>
-          </motion.div>
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg text-center"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Rocket className="mx-auto h-12 w-12 text-yellow-400 mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Future-Proof</h3>
-            <p>
-              Built with cutting-edge technology that scales with your business!
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <footer className="mt-12 p-6 bg-gradient-to-r from-red-600 to-purple-600 text-center">
-        <p className="text-2xl font-bold">Ready to dominate your market?</p>
-        <motion.button
-          className="mt-4 px-8 py-3 bg-white text-black font-bold rounded-full text-lg hover:bg-gray-100 transition-colors duration-200"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Launch Your Success Story Now!
-        </motion.button>
-      </footer>
     </div>
   );
 }
