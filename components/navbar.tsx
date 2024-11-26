@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, Zap } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
+import Link from "next/link";
 
 export function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,14 +22,14 @@ export function NavbarComponent() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a
+              <Link
                 href="/"
                 className="text-white font-extrabold text-2xl tracking-tighter"
               >
                 <span className="text-yellow-400">BEST</span>
                 <span className="text-red-500">WEBSITES</span>
                 <span className="text-blue-500">DAYTONA</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hidden md:block">
@@ -37,8 +38,8 @@ export function NavbarComponent() {
               <NavLink href="/services">Services</NavLink>
               <NavLink href="/portfolio">Portfolio</NavLink>
               <NavLink href="/contact">Contact</NavLink>
-              <a
-                href="#cta"
+              <Link
+                href="/contact"
                 className="relative inline-flex items-center px-4 py-2 border border-neutral-200 border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 animate-pulse dark:border-neutral-800"
               >
                 <Zap className="mr-2 h-4 w-4" />
@@ -47,7 +48,7 @@ export function NavbarComponent() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="md:hidden">
@@ -73,13 +74,13 @@ export function NavbarComponent() {
             <MobileNavLink href="/services">Services</MobileNavLink>
             <MobileNavLink href="/portfolio">Portfolio</MobileNavLink>
             <MobileNavLink href="/contact">Contact</MobileNavLink>
-            <a
-              href="#cta"
+            <Link
+              href="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-white bg-red-600 hover:bg-red-700 animate-pulse"
             >
               <Zap className="inline-block mr-2 h-4 w-4" />
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       )}

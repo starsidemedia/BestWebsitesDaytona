@@ -1,43 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Starside Media Accessibility Policy",
-  description: "Accessibility Policy for Starside Media.",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://www.starside.media/accessibility",
-    title: "Starside Media - Web Accessibility Commitment",
-    description:
-      "Starside Media is committed to providing an accessible web experience for all users, ensuring compliance with web accessibility standards.",
-    images: [
-      {
-        url: "https://www.starside.media/StarsideLogo.png",
-        width: 1200,
-        height: 630,
-        alt: "Starside Media Logo - Leading Web Development Services",
-      },
-    ],
-  },
-  additionalMetaTags: [
-    {
-      property: "dc:creator",
-      content: "Starside Media",
-    },
-    {
-      name: "application-name",
-      content: "Starside Media",
-    },
-  ],
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/favicon-192x192.png",
-    other: {
-      rel: "apple-touch-icon",
-      url: "/favicon-512x512.png",
-    },
-  },
+  title: "Accessibility Policy - Best Websites Daytona",
+  description:
+    "Best Websites Daytona is committed to providing an inclusive web experience for all users. Learn more about our accessibility initiatives.",
 };
 
 export default function AccessibilityPolicy() {
@@ -48,15 +14,16 @@ export default function AccessibilityPolicy() {
           <h1 className="text-4xl font-bold mb-4">Accessibility Policy</h1>
 
           <p className="text-sm text-muted-foreground mb-8">
-            Last updated: September 8, 2024
+            Last updated: November 25, 2024
           </p>
 
           <p className="mb-6">
-            At Starside Media, we are committed to providing a website that is
-            accessible to the widest possible audience, regardless of technology
-            or ability. We actively work to ensure that our website adheres to
-            best practices and standards as defined by the World Wide Web
-            Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.1.
+            At Best Websites Daytona, we are committed to providing a website
+            that is accessible to the widest possible audience, regardless of
+            technology or ability. We actively work to ensure that our website
+            adheres to best practices and standards as defined by the World Wide
+            Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG)
+            2.1.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4">
@@ -96,10 +63,10 @@ export default function AccessibilityPolicy() {
             Accessibility Standards
           </h2>
           <p className="mb-6">
-            Starside Media follows the Web Content Accessibility Guidelines
-            (WCAG) 2.1, Levels A and AA, to ensure our website is accessible to
-            everyone. We continually work to improve and maintain these
-            standards.
+            Best Websites Daytona follows the Web Content Accessibility
+            Guidelines (WCAG) 2.1, Levels A and AA, to ensure our website is
+            accessible to everyone. We continually work to improve and maintain
+            these standards.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4">
@@ -138,18 +105,18 @@ export default function AccessibilityPolicy() {
           </h2>
           <p className="mb-6">
             We are always working to improve the accessibility of our website.
-            If you encounter any accessibility issues while using Starside
-            Media’s website, we encourage you to let us know so we can address
-            the issue as quickly as possible.
+            If you encounter any accessibility issues while using Best Websites
+            Daytona&apos;s website, we encourage you to let us know so we can
+            address the issue as quickly as possible.
           </p>
 
           <p className="mb-6">
             To report an accessibility issue, please contact us at:{" "}
             <a
-              href="mailto:accessibility@starside.media"
+              href="mailto:info@bestwebsitesdaytona.com"
               className="text-primary hover:underline"
             >
-              accessibility@starside.media
+              info@bestwebsitesdaytona.com
             </a>
             .
           </p>
@@ -169,9 +136,9 @@ export default function AccessibilityPolicy() {
             Continuous Improvement
           </h2>
           <p className="mb-6">
-            At Starside Media, we are committed to continuously improving the
-            accessibility of our website. As technology evolves, we will strive
-            to implement new strategies to make our digital content more
+            At Best Websites Daytona, we are committed to continuously improving
+            the accessibility of our website. As technology evolves, we will
+            strive to implement new strategies to make our digital content more
             inclusive and accessible for all users.
           </p>
         </div>

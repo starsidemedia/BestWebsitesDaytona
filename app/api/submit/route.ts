@@ -3,10 +3,12 @@ import nodemailer from "nodemailer";
 
 // Create a transporter using SMTP
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
@@ -17,7 +19,7 @@ export async function POST(request: Request) {
   try {
     // Prepare email content
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: process.env.EMAIL_USERNANME,
       to: process.env.EMAIL_RECIPIENT, // Send to yourself
       subject:
         type === "contact"

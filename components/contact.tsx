@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Phone, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -54,7 +55,8 @@ export default function ContactForm() {
             <h2 className="text-3xl font-bold mb-6">Burn Rubber to Success!</h2>
             <p className="mb-6">
               Ready to leave your competition in the dust? Fill out this form
-              faster than a pit stop, and we'll turbocharge your web presence!
+              faster than a pit stop, and we&apos;ll turbocharge your web
+              presence!
             </p>
             <form
               onSubmit={handleSubmit}
@@ -71,7 +73,7 @@ export default function ContactForm() {
                   type="text"
                   id="name"
                   value={name}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full px-3 py-2 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -102,9 +104,7 @@ export default function ContactForm() {
                 <textarea
                   id="message"
                   value={message}
-                  onChange={(e) =>
-                    setFormState({ ...formState, message: e.target.value })
-                  }
+                  onChange={(e) => setMessage(e.target.value)}
                   rows={4}
                   className="w-full px-3 py-2 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
@@ -135,22 +135,28 @@ export default function ContactForm() {
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <Phone className="mr-4 text-green-500" />
-                  <span>(555) FAST-WEB</span>
+                  <Link href="tel:13863207264">
+                    <span>(386) 320-7264</span>
+                  </Link>
                 </li>
                 <li className="flex items-center">
                   <Mail className="mr-4 text-blue-500" />
-                  <span>zoom@bestwebsitesdaytona.com</span>
+                  <Link href="tel:13863207264">
+                    <span>info@bestwebsitesdaytona.com</span>
+                  </Link>
                 </li>
                 <li className="flex items-center">
                   <MapPin className="mr-4 text-purple-500" />
-                  <span>123 Speedway Blvd, Daytona Beach, FL</span>
+                  <Link href="https://maps.app.goo.gl/JYGyuL7vLiz7gyiRA ">
+                    <span>Daytona Beach, FL</span>
+                  </Link>
                 </li>
               </ul>
               <div className="mt-8">
                 <h3 className="text-xl font-bold mb-4">Race Hours</h3>
                 <p>Monday - Friday: 9AM - 5PM</p>
                 <p>Saturday: 10AM - 2PM</p>
-                <p>Sunday: Closed (We're at the track!)</p>
+                <p>Sunday: Closed (We&apos;re at the track!)</p>
               </div>
             </div>
           </motion.div>
@@ -159,7 +165,7 @@ export default function ContactForm() {
 
       <footer className="mt-12 p-6 bg-green-600 text-center overflow-hidden">
         <p className="text-2xl font-bold">
-          Don't let your website finish last!
+          Don&apos;t let your website finish last!
         </p>
         <motion.p
           className="mt-4 text-4xl font-extrabold"

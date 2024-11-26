@@ -12,6 +12,8 @@ import {
   Megaphone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function LandingPageComponent() {
   const [scrollY, setScrollY] = useState(0);
@@ -62,35 +64,44 @@ export default function LandingPageComponent() {
         }}
         className="w-full h-[80vh] md:h-screen"
       >
-        <header className="h-screen flex items-center justify-center relative">
-          <div className="text-center z-10">
-            <motion.h1
+        <header className="h-screen flex items-center justify-center relative bg-black bg-opacity-40">
+          <div className="text-center z-10 ">
+            <Image
+              src="/logos/logo_resize.svg"
+              width={900}
+              height={900}
+              alt="Best Websites Daytona"
+              dangerouslyallowsvg
+            />
+            {/* <motion.h1
               className="stroke-text text-6xl md:text-8xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-blue-500 py-2"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Best Websites Daytona
-            </motion.h1>
+            </motion.h1> */}
             <motion.p
               className=" text-2xl md:text-3xl mb-8 py-2"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Turbocharging Daytona's Digital Presence
+              Turbocharging Daytona&#39;s Digital Presence
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-red-500 to-yellow-500 hover:from-red-600 hover:to-yellow-600 text-black font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Rev Up Your Website
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-red-500 to-yellow-500 hover:from-red-600 hover:to-yellow-600 text-black font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Rev Up Your Website
+                </Button>
+              </Link>
             </motion.div>
           </div>
           <motion.div
@@ -149,7 +160,8 @@ export default function LandingPageComponent() {
               <Globe className="w-16 h-16 mx-auto mb-4 text-white" />
               <h3 className="text-2xl font-bold mb-2">Local Expertise</h3>
               <p>
-                We know Daytona better than the back of our pit crew's hands!
+                We know Daytona better than the back of our pit crew&#39;s
+                hands!
               </p>
             </motion.div>
             <motion.div
@@ -169,18 +181,20 @@ export default function LandingPageComponent() {
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Ready to Take the Checkered Flag in Daytona's Digital Race?
+            Ready to Take the Checkered Flag in Daytona&#39;s Digital Race?
           </h2>
           <p className="text-xl mb-12">
-            Don't let your competitors leave you in the digital dust. It's time
-            to take pole position in Daytona's online world!
+            Don&#39;t let your competitors leave you in the digital dust.
+            It&#39;s time to take pole position in Daytona&#39;s online world!
           </p>
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Engines!
-          </Button>
+          <Link href="/services">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+            >
+              See What We Offer!
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -189,15 +203,19 @@ export default function LandingPageComponent() {
           <div className="flex flex-wrap justify-between items-center">
             <div className="w-full md:w-1/3 text-center md:text-left mb-6 md:mb-0">
               <h2 className="text-2xl font-bold">Best Websites Daytona</h2>
-              <p>Accelerating Daytona's Digital Dreams</p>
+              <p>Accelerating Daytona&#39;s Digital Dreams</p>
             </div>
             <div className="w-full md:w-1/3 text-center mb-6 md:mb-0">
-              <p>123 Speedway Blvd, Daytona Beach, FL 32114</p>
-              <p>contact@bestwebsitesdaytona.com</p>
+              <p>Servicing Central Florida Commercial Businesses</p>
+              <Link href="mailto:contact@bestwebsitesdaytona.com">
+                <p>contact@bestwebsitesdaytona.com</p>
+              </Link>
             </div>
             <div className="w-full md:w-1/3 text-center md:text-right">
               <p>&copy; 2023 Best Websites Daytona. All rights reserved.</p>
-              <p>Powered by Daytona Spirit and Code</p>
+              <Link href="https://www.starside.media/">
+                <p>Powered by Starside Media</p>
+              </Link>
             </div>
           </div>
         </div>

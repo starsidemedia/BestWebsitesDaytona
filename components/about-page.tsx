@@ -24,10 +24,10 @@ export default function AboutPage() {
       <main className="container mx-auto px-4 py-12">
         <section className="mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 animate-bounce">
-            YOU'RE HERE BECAUSE WE'RE THE BEST
+            YOU&apos;RE HERE BECAUSE WE&apos;RE THE BEST
           </h2>
           <p className="text-xl md:text-2xl mb-8 animate-fade-in">
-            And that's not just talk. It's cold, hard, digital truth.
+            And that's not just talk. It&apos;s cold, hard, digital truth.
           </p>
         </section>
 
@@ -37,8 +37,8 @@ export default function AboutPage() {
               <Search className="mr-2" /> SEO MASTERS
             </h3>
             <p>
-              We don't just play the SEO game. We wrote the rulebook. Your site
-              will climb rankings faster than a rocket on steroids.
+              We don&apos;t just play the SEO game. We wrote the rulebook. Your
+              site will climb rankings faster than a rocket on steroids.
             </p>
           </div>
           <div className="bg-gradient-to-br from-green-400 to-blue-500 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
@@ -46,8 +46,8 @@ export default function AboutPage() {
               <Palette className="mr-2" /> DESIGN GENIUSES
             </h3>
             <p>
-              Our designs don't just turn heads. They break necks. Prepare for a
-              visual feast that'll make your competitors weep.
+              Our designs don&apos;t just turn heads. They break necks. Prepare
+              for a visual feast that&apos;ll make your competitors weep.
             </p>
           </div>
           <div className="bg-gradient-to-br from-red-400 to-pink-500 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
@@ -64,8 +64,8 @@ export default function AboutPage() {
               <Award className="mr-2" /> AWARD-WINNING
             </h3>
             <p>
-              We've got more awards than you've had hot dinners. But we're not
-              in it for the trophies. We're in it to make you #1.
+              We&apos;ve got more awards than you&apos;ve had hot dinners. But
+              we're not in it for the trophies. We&apos;re in it to make you #1.
             </p>
           </div>
         </section>

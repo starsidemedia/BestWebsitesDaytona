@@ -1,16 +1,7 @@
 export const metadata = {
-  title: "Starside Media - Privacy Policy",
+  title: "Privacy Policy - Best Websites Daytona",
   description:
-    "Read Starside Media's privacy policy to understand how we handle your data.",
-  images: [
-    {
-      url: "https://starside.media/StarsideLogoBlackCut.png",
-      width: 1200,
-      height: 630,
-      alt: "Starside Media Logo - Privacy Policy",
-    },
-  ],
-  url: "https://starside.media/privacy-policy",
+    "We value your privacy and ensure that your data is securely handled. Learn more about our privacy practices.",
 };
 
 export default function PrivacyPolicy() {
@@ -19,7 +10,7 @@ export default function PrivacyPolicy() {
       <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
 
       <p className="text-sm text-muted-foreground mb-8">
-        Last updated: August 27, 2024
+        Last updated: November 25, 2024
       </p>
 
       <p className="mb-6">
@@ -51,14 +42,15 @@ export default function PrivacyPolicy() {
         </li>
         <li>
           <strong>Affiliate</strong>: an entity that controls, is controlled by,
-          or is under common control with a party, where "control" means
-          ownership of 50% or more of the shares, equity interest, or other
-          securities entitled to vote for election of directors or other
+          or is under common control with a party, where &quot;control&quot;
+          means ownership of 50% or more of the shares, equity interest, or
+          other securities entitled to vote for election of directors or other
           managing authority.
         </li>
         <li>
-          <strong>Company</strong> (referred to as either "the Company", "We",
-          "Us" or "Our" in this Agreement): refers to Starside.
+          <strong>Company</strong> (referred to as either &quot;the
+          Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
+          this Agreement): refers to Best Websites Daytona.
         </li>
         <li>
           <strong>Cookies</strong>: small files that are placed on your
@@ -94,14 +86,15 @@ export default function PrivacyPolicy() {
           itself (for example, the duration of a page visit).
         </li>
         <li>
-          <strong>Website</strong>: refers to Starside, accessible from{" "}
+          <strong>Website</strong>: refers to Best Websites Daytona, accessible
+          from{" "}
           <a
-            href="https://www.starside.media/"
+            href="https://www.bestwebsitesdaytona.com/"
             className="text-primary hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://www.starside.media/
+            https://www.bestwebsitesdaytona.com/
           </a>
         </li>
         <li>
@@ -135,10 +128,11 @@ export default function PrivacyPolicy() {
       <h4 className="text-lg font-medium mb-2">Usage Data</h4>
       <p className="mb-6">
         Usage Data is collected automatically when using the service. Usage Data
-        may include information such as your device's Internet Protocol address
-        (e.g., IP address), browser type, browser version, the pages of our
-        service that you visit, the time and date of your visit, the time spent
-        on those pages, unique device identifiers, and other diagnostic data.
+        may include information such as your device&apos;s Internet Protocol
+        address (e.g., IP address), browser type, browser version, the pages of
+        our service that you visit, the time and date of your visit, the time
+        spent on those pages, unique device identifiers, and other diagnostic
+        data.
       </p>
 
       <h3 className="text-xl font-semibold mb-3">Use of Your Personal Data</h3>
@@ -166,10 +160,10 @@ export default function PrivacyPolicy() {
         <li>
           <strong>To contact you:</strong> To contact you by email, telephone
           calls, SMS, or other equivalent forms of electronic communication,
-          such as a mobile application's push notifications regarding updates or
-          informative communications related to the functionalities, products,
-          or contracted services, including the security updates, when necessary
-          or reasonable for their implementation.
+          such as mobile application&apos;s push notifications regarding updates
+          or informative communications related to the functionalities,
+          products, or contracted services, including security updates, when
+          necessary or reasonable for their implementation.
         </li>
         <li>
           <strong>To provide you</strong> with news, special offers, and general
@@ -203,7 +197,7 @@ export default function PrivacyPolicy() {
       </h3>
       <p className="mb-6">
         The security of your personal data is important to us, but remember that
-        no method of transmission over the Internet, or method of electronic
+        no method of transmission over the Internet or method of electronic
         storage is 100% secure. While we strive to use commercially acceptable
         means to protect your personal data, we cannot guarantee its absolute
         security.
@@ -216,8 +210,8 @@ export default function PrivacyPolicy() {
         We may update our Privacy Policy from time to time. We will notify you
         of any changes by posting the new Privacy Policy on this page. We will
         let you know via email and/or a prominent notice on our service, prior
-        to the change becoming effective and update the "Last updated" date at
-        the top of this Privacy Policy.
+        to the change becoming effective and update the &quot;Last updated&quot;
+        date at the top of this Privacy Policy.
       </p>
 
       <p className="mb-6">
@@ -235,21 +229,21 @@ export default function PrivacyPolicy() {
         <li>
           By email:{" "}
           <a
-            href="mailto:seth@starside.media"
+            href="mailto:info@bestwebsitesdaytona.com"
             className="text-primary hover:underline"
           >
-            seth@starside.media
+            info@bestwebsitesdaytona.com
           </a>
         </li>
         <li>
           By visiting this page on our website:{" "}
           <a
-            href="https://www.starside.media/contact"
+            href="https://www.bestwebsitesdaytona.com/contact"
             className="text-primary hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://www.starside.media/contact
+            https://www.bestwebsitesdaytona.com/contact
           </a>
         </li>
       </ul>

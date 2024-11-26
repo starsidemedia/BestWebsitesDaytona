@@ -14,6 +14,9 @@ import {
   Send,
 } from "lucide-react";
 
+import { businesses } from "./portfolio";
+import Link from "next/link";
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
@@ -43,6 +46,11 @@ export default function Footer() {
     }
   };
 
+  const recentBusinesses =
+    Array.isArray(businesses) && businesses.length > 0
+      ? businesses.slice(4, 8)
+      : [];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -53,25 +61,25 @@ export default function Footer() {
               <span className="text-red-500">DAYTONA</span>
             </h2>
             <p className="text-gray-300">
-              Crafting the most aggressive websites for Daytona's finest
+              Crafting the most aggressive websites for Daytona&#39;s finest
               businesses. Stand out. Dominate. Succeed.
             </p>
             <div className="flex space-x-4">
               <SocialIcon
                 Icon={Facebook}
-                href="#"
+                href="https://www.facebook.com/media.starside"
               />
               <SocialIcon
                 Icon={Twitter}
-                href="#"
+                href="https://x.com/MediaStarside"
               />
               <SocialIcon
                 Icon={Instagram}
-                href="#"
+                href="https://www.instagram.com/starside_media/"
               />
               <SocialIcon
                 Icon={Linkedin}
-                href="#"
+                href="https://www.linkedin.com/in/sethkeating/"
               />
             </div>
           </div>
@@ -79,24 +87,28 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Our Services</h3>
             <ul className="space-y-2">
-              <FooterLink href="#web-design">Web Design</FooterLink>
-              <FooterLink href="#seo">SEO Optimization</FooterLink>
-              <FooterLink href="#e-commerce">E-commerce Solutions</FooterLink>
-              <FooterLink href="#mobile-apps">
-                Mobile App Development
-              </FooterLink>
+              <FooterLink href="/services">Web Design</FooterLink>
+              <FooterLink href="/services">SEO Optimization</FooterLink>
+              <FooterLink href="/services">E-commerce Solutions</FooterLink>
+              <FooterLink href="/services">Mobile App Development</FooterLink>
             </ul>
           </div>
 
           <div>
             <h3 className="text-xl font-bold mb-4">Recent Projects</h3>
             <ul className="space-y-2">
-              <FooterLink href="#project1">
-                Daytona Speedway Redesign
-              </FooterLink>
-              <FooterLink href="#project2">Beach Street Boutique</FooterLink>
-              <FooterLink href="#project3">Ocean View Restaurant</FooterLink>
-              <FooterLink href="#project4">Volusia Mall Online</FooterLink>
+              {recentBusinesses.length > 0 ? (
+                recentBusinesses.map((business, index) => (
+                  <FooterLink
+                    href={business.businessUrl}
+                    key={index}
+                  >
+                    {business.businessName}
+                  </FooterLink>
+                ))
+              ) : (
+                <li>No recent projects available.</li>
+              )}
             </ul>
           </div>
 
@@ -105,25 +117,25 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-yellow-400" />
-                <a
+                <Link
                   href="mailto:info@bestdaytona.com"
                   className="hover:text-yellow-400 transition-colors"
                 >
                   info@bestdaytona.com
-                </a>
+                </Link>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-yellow-400" />
-                <a
-                  href="tel:+13861234567"
+                <Link
+                  href="tel:+13863207264"
                   className="hover:text-yellow-400 transition-colors"
                 >
-                  (386) 123-4567
-                </a>
+                  (386) 320-7264
+                </Link>
               </li>
               <li className="flex items-center">
                 <MapPin className="mr-2 h-5 w-5 text-yellow-400" />
-                <span>123 Beach Street, Daytona Beach, FL 32114</span>
+                <span>Servicing Central Florida</span>
               </li>
             </ul>
           </div>
@@ -149,7 +161,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-r-md transition-colors duration-300 flex items-center justify-center"
+                  className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-r-md transition-colors duration-300 flex items-center justify-center "
                 >
                   <Send className="mr-2 h-5 w-5" />
                   Subscribe
@@ -179,18 +191,36 @@ export default function Footer() {
             © 2024 Best Websites Daytona. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
-            <a
-              href="#terms"
+            <Link
+              href="/accessibility"
+              className="text-gray-400 hover:text-white mr-4 text-sm"
+            >
+              Accessibility
+            </Link>
+            <Link
+              href="/cookie-policy"
+              className="text-gray-400 hover:text-white mr-4 text-sm"
+            >
+              Cookie Policy
+            </Link>
+            <Link
+              href="disclaimer"
+              className="text-gray-400 hover:text-white mr-4 text-sm"
+            >
+              Disclaimer
+            </Link>
+            <Link
+              href="/terms-of-service"
               className="text-gray-400 hover:text-white mr-4 text-sm"
             >
               Terms of Service
-            </a>
-            <a
-              href="#privacy"
+            </Link>
+            <Link
+              href="/privacy"
               className="text-gray-400 hover:text-white text-sm"
             >
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -204,7 +234,7 @@ export default function Footer() {
             href="#contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-100 transition-colors duration-300"
           >
-            Get Your Free Consultation
+            <Link href="/contact">Get Your Free Consultation</Link>
             <Zap className="ml-2 -mr-1 h-5 w-5" />
           </a>
         </div>

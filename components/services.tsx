@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Zap,
   Check,
-  X,
   ChevronDown,
   ChevronUp,
   Globe,
@@ -14,7 +13,7 @@ import {
   Megaphone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 
 export default function ServicesAndPricingComponent() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -161,19 +160,21 @@ export default function ServicesAndPricingComponent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Daytona's Premier Web Services - Faster, Bolder, Better
+              Daytona&apos;s Premier Web Services - Faster, Bolder, Better
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button
-                size="lg"
-                className="bg-red-600 hover:bg-red-500 text-white font-bold rounded-full text-lg"
-              >
-                Get a Free Consultation <Zap className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-red-600 hover:bg-red-500 text-white font-bold rounded-full text-lg"
+                >
+                  Get a Free Consultation <Zap className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -242,9 +243,11 @@ export default function ServicesAndPricingComponent() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold">
-                    Choose {plan.name}
-                  </Button>
+                  <Link href="/contact">
+                    <Button className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold">
+                      Choose {plan.name}
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -253,7 +256,7 @@ export default function ServicesAndPricingComponent() {
 
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">
-            Why We're the Fastest in the Race
+            Why We&apos;re the Fastest in the Race
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -340,8 +343,8 @@ export default function ServicesAndPricingComponent() {
             Ready to Leave Your Competition in the Dust?
           </h2>
           <p className="text-xl mb-8">
-            Contact us now for a free consultation and let's accelerate your
-            online success!
+            Contact us now for a free consultation and let&apos;s accelerate
+            your online success!
           </p>
           <Button
             size="lg"

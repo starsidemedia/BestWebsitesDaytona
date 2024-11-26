@@ -2,79 +2,78 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Star, Zap, Trophy, Rocket } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { X, ExternalLink } from "lucide-react";
 import Image from "next/image"; // Import Next.js Image component
+
+export const businesses = [
+  {
+    businessName: "IV Direct",
+    businessUrl: "https://iv.direct/",
+    description:
+      "IV Direct offers personalized intravenous hydration therapies aimed at enhancing health, wellness, and recovery. Their services are tailored for various needs, including athletic performance, illness recovery, and general well-being.",
+    logoUrl: "/IVDirect.webp",
+    category: "Health & Wellness",
+  },
+  {
+    businessName: "Fixed By T",
+    businessUrl: "https://fixedbyt.com/",
+    description:
+      "Fixed By T provides a wide range of handyman services in Volusia County, specializing in home repairs, installations, and maintenance with high-quality workmanship.",
+    logoUrl: "/FixedByT.webp",
+    category: "Services",
+  },
+  {
+    businessName: "Sobak Music",
+    businessUrl: "https://sobakmusic.com/",
+    description:
+      "Sobak Music, by Anthony Sobak, blends rock music with spiritual themes, aiming to inspire through a unique musical experience that explores personal growth and spirituality.",
+    logoUrl: "/Sobak.webp",
+    category: "Entertainment",
+  },
+  {
+    businessName: "Guideline Gopher",
+    businessUrl: "https://guidelinegopher.com/",
+    description:
+      "Guideline Gopher is an AI-powered tool that simplifies mortgage guidelines for professionals and borrowers, offering quick, accurate interpretations to streamline lending processes.",
+    logoUrl: "/GuidelineGopher.png",
+    category: "Technology",
+  },
+  {
+    businessName: "Sam Boyd Real Estate",
+    businessUrl: "https://samboydrealestate.com/",
+    description:
+      "Sam Boyd Real Estate specializes in luxury properties on Florida's Space Coast, offering expert service for buyers and sellers in the high-end market.",
+    logoUrl: "/SamBoyd.webp",
+    category: "Real Estate",
+  },
+  {
+    businessName: "Daybreak Concrete",
+    businessUrl: "https://daybreakconcrete.com/",
+    description:
+      "Daybreak Concrete, Decorative Concrete Specialists, offers a wide range of concrete services, including stamped concrete, concrete overlays, and concrete countertops.",
+    logoUrl: "/Daybreak.png",
+    category: "Construction",
+  },
+  {
+    businessName: "PGX University",
+    businessUrl: "https://pgxuniversity.com/",
+    description:
+      "PGX University offers educational resources and personalized learning programs focused on pharmacogenomics, helping healthcare professionals enhance their understanding of personalized medicine.",
+    logoUrl: "/PGxText.png",
+    category: "Education",
+  },
+  {
+    businessName: "Crystal Clean Blasting",
+    businessUrl: "https://crystalcleanblasting.com/",
+    description:
+      "Crystal Clean Blasting is a multimedia blasting company based in Baltimore, offering paint removal, surface cleaning, and restoration services using eco-friendly blasting techniques.",
+    logoUrl: "/CrystalClean.webp",
+    category: "Services",
+  },
+];
 
 export default function PortfolioComponent() {
   const [selectedId, setSelectedId] = useState(null);
-
-  const businesses = [
-    {
-      businessName: "IV Direct",
-      businessUrl: "https://iv.direct/",
-      description:
-        "IV Direct offers personalized intravenous hydration therapies aimed at enhancing health, wellness, and recovery. Their services are tailored for various needs, including athletic performance, illness recovery, and general well-being.",
-      logoUrl: "/IVDirect.webp",
-      category: "Health & Wellness",
-    },
-    {
-      businessName: "Fixed By T",
-      businessUrl: "https://fixedbyt.com/",
-      description:
-        "Fixed By T provides a wide range of handyman services in Volusia County, specializing in home repairs, installations, and maintenance with high-quality workmanship.",
-      logoUrl: "/FixedByT.webp",
-      category: "Services",
-    },
-    {
-      businessName: "Sobak Music",
-      businessUrl: "https://sobakmusic.com/",
-      description:
-        "Sobak Music, by Anthony Sobak, blends rock music with spiritual themes, aiming to inspire through a unique musical experience that explores personal growth and spirituality.",
-      logoUrl: "/Sobak.webp",
-      category: "Entertainment",
-    },
-    {
-      businessName: "Guideline Gopher",
-      businessUrl: "https://guidelinegopher.com/",
-      description:
-        "Guideline Gopher is an AI-powered tool that simplifies mortgage guidelines for professionals and borrowers, offering quick, accurate interpretations to streamline lending processes.",
-      logoUrl: "/GuidelineGopher.png",
-      category: "Technology",
-    },
-    {
-      businessName: "Sam Boyd Real Estate",
-      businessUrl: "https://samboydrealestate.com/",
-      description:
-        "Sam Boyd Real Estate specializes in luxury properties on Florida's Space Coast, offering expert service for buyers and sellers in the high-end market.",
-      logoUrl: "/SamBoyd.webp",
-      category: "Real Estate",
-    },
-    {
-      businessName: "Daybreak Concrete",
-      businessUrl: "https://daybreakconcrete.com/",
-      description:
-        "Daybreak Concrete, Decorative Concrete Specialists, offers a wide range of concrete services, including stamped concrete, concrete overlays, and concrete countertops.",
-      logoUrl: "/Daybreak.png",
-      category: "Construction",
-    },
-    {
-      businessName: "PGX University",
-      businessUrl: "https://pgxuniversity.com/",
-      description:
-        "PGX University offers educational resources and personalized learning programs focused on pharmacogenomics, helping healthcare professionals enhance their understanding of personalized medicine.",
-      logoUrl: "/PGxText.png",
-      category: "Education",
-    },
-    {
-      businessName: "Crystal Clean Blasting",
-      businessUrl: "https://crystalcleanblasting.com/",
-      description:
-        "Crystal Clean Blasting is a multimedia blasting company based in Baltimore, offering paint removal, surface cleaning, and restoration services using eco-friendly blasting techniques.",
-      logoUrl: "/CrystalClean.webp",
-      category: "Services",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -189,13 +188,6 @@ export default function PortfolioComponent() {
                     </p>
                     <p className="mb-4">{business.description}</p>
                     <div className="flex justify-between items-center">
-                      <div className="flex space-x-2">
-                        <Star className="text-yellow-400" />
-                        <Star className="text-yellow-400" />
-                        <Star className="text-yellow-400" />
-                        <Star className="text-yellow-400" />
-                        <Star className="text-yellow-400" />
-                      </div>
                       <a
                         href={business.businessUrl}
                         target="_blank"

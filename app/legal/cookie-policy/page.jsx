@@ -1,36 +1,27 @@
-import Link from "next/link";
-
 export const metadata = {
-  title: "Starside Media - Cookies Policy",
+  title: "Cookie Policy - Best Websites Daytona",
   description:
-    "Learn about how Starside Media uses cookies and similar technologies on its website.",
-  images: [
-    {
-      url: "https://starside.media/StarsideLogoBlackCut.png",
-      width: 1200,
-      height: 630,
-      alt: "Starside Media Logo - Cookies Policy",
-    },
-  ],
-  url: "https://starside.media/cookies-policy",
+    "Learn about how we use cookies to enhance your experience while visiting our website.",
 };
+
 export default function CookiePolicy() {
   return (
     <>
       <main>
         <div className="max-w-5xl mx-auto py-8 px-4 md:py-32 md:px-8 text-foreground">
           <h1 className="text-4xl font-bold mb-4">
-            Cookie Policy for Starside
+            Cookie Policy for Best Websites Daytona
           </h1>
 
           <p className="text-sm text-muted-foreground mb-8">
-            <strong>Last updated: August 27th, 2024</strong>
+            <strong>Last updated: November 25, 2024</strong>
           </p>
 
           <p className="mb-6">
-            This cookie policy explains how Starside ("we", "us", or "our") uses
-            cookies and similar technologies to recognize you when you visit our
-            website at starside.media. It explains what these technologies are
+            This cookie policy explains how Best Websites Daytona
+            (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) uses cookies
+            and similar technologies to recognize you when you visit our website
+            at bestwebsitesdaytona.com. It explains what these technologies are
             and why we use them, as well as your rights to control our use of
             them.
           </p>
@@ -45,14 +36,15 @@ export default function CookiePolicy() {
           </p>
 
           <p className="mb-6">
-            Cookies set by the website owner (in this case, Starside) are called
-            "first party cookies". Cookies set by parties other than the website
-            owner are called "third party cookies". Third party cookies enable
-            third party features or functionality to be provided on or through
-            the website (e.g., advertising, interactive content, and analytics).
-            The parties that set these third party cookies can recognize your
-            computer both when it visits the website in question and also when
-            it visits certain other websites.
+            Cookies set by the website owner (in this case, Best Websites
+            Daytona) are called &quot;first party cookies&quot;. Cookies set by
+            parties other than the website owner are called &quot;third party
+            cookies&quot;. Third party cookies enable third party features or
+            functionality to be provided on or through the website (e.g.,
+            advertising, interactive content, and analytics). The parties that
+            set these third party cookies can recognize your computer both when
+            it visits the website in question and also when it visits certain
+            other websites.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4">
@@ -62,11 +54,11 @@ export default function CookiePolicy() {
           <p className="mb-6">
             We use first party and third party cookies for several reasons. Some
             cookies are required for technical reasons in order for our website
-            to operate, and we refer to these as "essential" or "strictly
-            necessary" cookies. Other cookies also enable us to track and target
-            the interests of our users to enhance the experience on our website.
-            Third parties serve cookies through our website for advertising,
-            analytics, and other purposes.
+            to operate, and we refer to these as &quot;essential&quot; or
+            &quot;strictly necessary&quot; cookies. Other cookies also enable us
+            to track and target the interests of our users to enhance the
+            experience on our website. Third parties serve cookies through our
+            website for advertising, analytics, and other purposes.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4">
@@ -126,7 +118,7 @@ export default function CookiePolicy() {
             You may also set or amend your web browser controls to accept or
             refuse cookies. As the means by which you can refuse cookies through
             your web browser controls vary from browser-to-browser, you should
-            visit your browser's help menu for more information.
+            visit your browser&apos;s help menu for more information.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4">
@@ -149,10 +141,10 @@ export default function CookiePolicy() {
             If you have any questions about our use of cookies or other
             technologies, please email us at{" "}
             <a
-              href="mailto:seth@starside.media"
+              href="mailto:info@bestwebsitesdaytona.com"
               className="text-primary hover:underline"
             >
-              seth@starside.media
+              info@bestwebsitesdaytona.com
             </a>
             .
           </p>
