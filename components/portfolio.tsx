@@ -73,7 +73,7 @@ export const businesses = [
 ];
 
 export default function PortfolioComponent() {
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-black text-white">

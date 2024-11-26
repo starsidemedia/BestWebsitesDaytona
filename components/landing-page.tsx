@@ -71,7 +71,6 @@ export default function LandingPageComponent() {
               width={900}
               height={900}
               alt="Best Websites Daytona"
-              dangerouslyallowsvg
             />
             {/* <motion.h1
               className="stroke-text text-6xl md:text-8xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-blue-500 py-2"

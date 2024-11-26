@@ -4,15 +4,6 @@ import { Activity, Rocket, Zap, Award, Search, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCount((prevCount) => (prevCount + 1) % 1000);
-    }, 100);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <header className="py-6 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
@@ -77,7 +68,7 @@ export default function AboutPage() {
           </h2>
           <div className="flex justify-center items-center space-x-4 text-4xl font-bold">
             <Activity className="animate-pulse" />
-            <span>{count} SATISFIED CLIENTS</span>
+            <span>100s of SATISFIED CLIENTS</span>
             <Rocket className="animate-bounce" />
           </div>
         </section>
