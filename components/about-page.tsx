@@ -27,7 +27,7 @@ export default function AboutPage() {
             YOU&apos;RE HERE BECAUSE WE&apos;RE THE BEST
           </h2>
           <p className="text-xl md:text-2xl mb-8 animate-fade-in">
-            And that's not just talk. It&apos;s cold, hard, digital truth.
+            And that&apos;s not just talk. It&apos;s cold, hard, digital truth.
           </p>
         </section>
 
@@ -65,7 +65,8 @@ export default function AboutPage() {
             </h3>
             <p>
               We&apos;ve got more awards than you&apos;ve had hot dinners. But
-              we're not in it for the trophies. We&apos;re in it to make you #1.
+              we&apos;re not in it for the trophies. We&apos;re in it to make
+              you #1.
             </p>
           </div>
         </section>

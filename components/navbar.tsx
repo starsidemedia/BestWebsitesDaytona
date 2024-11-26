@@ -6,15 +6,6 @@ import Link from "next/link";
 
 export function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("'scroll'", handleScroll);
-    return () => window.removeEventListener("'scroll'", handleScroll);
-  }, []);
 
   return (
     <nav className="fixed w-full z-50 transition-all duration-300 bg-black">
