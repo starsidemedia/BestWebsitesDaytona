@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Disclaimer - Best Websites Daytona",
   description:

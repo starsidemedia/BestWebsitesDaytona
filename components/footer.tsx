@@ -235,10 +235,7 @@ export default function Footer() {
           <p className="text-white font-bold text-lg mb-4 md:mb-0">
             Ready to dominate the Daytona web scene?
           </p>
-          <Button
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-100 transition-colors duration-300"
-          >
+          <Button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-100 transition-colors duration-300">
             <Link href="/contact">Get Your Free Consultation</Link>
             <Zap className="ml-2 -mr-1 h-5 w-5" />
           </Button>
