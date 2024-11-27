@@ -38,7 +38,7 @@ export default function ContactForm() {
     }
   };
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className=" bg-black text-white sm:pt-16 pt-16">
       <header className="p-6 bg-green-600">
         <h1 className="text-4xl font-extrabold text-center animate-pulse">
           Race to the Finish Line - Contact Us!

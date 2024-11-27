@@ -140,12 +140,12 @@ export default function CookiePolicy() {
           <p>
             If you have any questions about our use of cookies or other
             technologies, please email us at{" "}
-            <a
+            <Link
               href="mailto:info@bestwebsitesdaytona.com"
               className="text-primary hover:underline"
             >
               info@bestwebsitesdaytona.com
-            </a>
+            </Link>
             .
           </p>
         </div>

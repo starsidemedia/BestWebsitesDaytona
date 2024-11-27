@@ -16,6 +16,7 @@ import {
 
 import { businesses } from "./portfolio";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -55,15 +56,19 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* First Column */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-extrabold">
-              <span className="text-yellow-400">BEST</span>
-              <span className="text-red-500">DAYTONA</span>
-            </h2>
-            <p className="text-gray-300">
-              Crafting the most aggressive websites for Daytona&#39;s finest
-              businesses. Stand out. Dominate. Succeed.
-            </p>
+            <div className="space-y-4">
+              <h2 className="text-3xl font-extrabold">
+                <span className="text-yellow-400 block">BEST</span>
+                <span className="text-red-500 block">WEBSITES</span>
+                <span className="text-blue-500 block">DAYTONA</span>
+              </h2>
+              <p className="text-gray-300">
+                Crafting the most aggressive websites for Daytona&#39;s finest
+                businesses. Stand out. Dominate. Succeed.
+              </p>
+            </div>
             <div className="flex space-x-4">
               <SocialIcon
                 Icon={Facebook}
@@ -230,13 +235,13 @@ export default function Footer() {
           <p className="text-white font-bold text-lg mb-4 md:mb-0">
             Ready to dominate the Daytona web scene?
           </p>
-          <a
-            href="#contact"
+          <Button
+            href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-100 transition-colors duration-300"
           >
             <Link href="/contact">Get Your Free Consultation</Link>
             <Zap className="ml-2 -mr-1 h-5 w-5" />
-          </a>
+          </Button>
         </div>
       </div>
     </footer>
@@ -252,26 +257,26 @@ function FooterLink({
 }) {
   return (
     <li>
-      <a
+      <Link
         href={href}
         className="hover:text-yellow-400 transition-colors flex items-center"
       >
         <ChevronRight className="mr-2 h-4 w-4 text-yellow-400" />
         {children}
-      </a>
+      </Link>
     </li>
   );
 }
 
 function SocialIcon({ Icon, href }: { Icon: React.ElementType; href: string }) {
   return (
-    <a
+    <Link
       href={href}
       className="text-gray-400 hover:text-white transition-colors duration-300"
       target="_blank"
       rel="noopener noreferrer"
     >
       <Icon className="h-6 w-6" />
-    </a>
+    </Link>
   );
 }

@@ -119,12 +119,12 @@ export default function TermsOfService() {
           <p className="mb-6">
             If you have any questions about these Terms of Service, you can
             contact us at{" "}
-            <a
+            <Link
               href="mailto:info@bestwebsitesdaytona.com"
               className="text-primary hover:underline"
             >
               info@bestwebsitesdaytona.com
-            </a>{" "}
+            </Link>{" "}
             or visit our contact page{" "}
             <Link
               href="/contact"

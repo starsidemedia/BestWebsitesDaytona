@@ -50,12 +50,12 @@ export default function Disclaimer() {
 
         <p className="mb-4">
           For more detailed information, please contact us directly at{" "}
-          <a
+          <Link
             href="mailto:info@bestwebsitesdaytona.com"
             className="text-primary hover:underline"
           >
             info@bestwebsitesdaytona.com
-          </a>
+          </Link>
           .
         </p>
       </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink } from "lucide-react";
 import Image from "next/image"; // Import Next.js Image component
+import Link from "next/link";
 
 export const businesses = [
   {
@@ -76,8 +77,8 @@ export default function PortfolioComponent() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <header className="relative h-[40vh] bg-gradient-to-r from-blue-900 via-purple-900 to-red-900">
+    <div className="min-h-screen bg-black text-white sm:pt-16 pt-16">
+      <header className="relative h-[40vh] bg-gradient-to-r from-blue-900 via-purple-900 to-red-900 ">
         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
@@ -188,14 +189,14 @@ export default function PortfolioComponent() {
                     </p>
                     <p className="mb-4">{business.description}</p>
                     <div className="flex justify-between items-center">
-                      <a
+                      <Link
                         href={business.businessUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-500 transition-colors duration-200"
                       >
                         Visit Site <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}

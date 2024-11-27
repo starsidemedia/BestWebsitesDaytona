@@ -88,14 +88,14 @@ export default function PrivacyPolicy() {
         <li>
           <strong>Website</strong>: refers to Best Websites Daytona, accessible
           from{" "}
-          <a
+          <Link
             href="https://www.bestwebsitesdaytona.com/"
             className="text-primary hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
             https://www.bestwebsitesdaytona.com/
-          </a>
+          </Link>
         </li>
         <li>
           <strong>You</strong>: the individual accessing or using the service,
@@ -228,23 +228,23 @@ export default function PrivacyPolicy() {
       <ul className="list-disc list-inside mb-6 space-y-4">
         <li>
           By email:{" "}
-          <a
+          <Link
             href="mailto:info@bestwebsitesdaytona.com"
             className="text-primary hover:underline"
           >
             info@bestwebsitesdaytona.com
-          </a>
+          </Link>
         </li>
         <li>
           By visiting this page on our website:{" "}
-          <a
+          <Link
             href="https://www.bestwebsitesdaytona.com/contact"
             className="text-primary hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
             https://www.bestwebsitesdaytona.com/contact
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -23,8 +23,8 @@ export async function POST(request: Request) {
       to: process.env.EMAIL_RECIPIENT, // Send to yourself
       subject:
         type === "contact"
-          ? "New Contact Form Submission"
-          : "New Newsletter Signup",
+          ? "New Contact Form Submission from Best Websites Daytona"
+          : "New Newsletter Signup from Best Websites Daytona",
       text:
         type === "contact"
           ? `Name: ${name}\nEmail: ${email}\nMessage: ${message}`

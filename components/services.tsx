@@ -346,12 +346,14 @@ export default function ServicesAndPricingComponent() {
             Contact us now for a free consultation and let&apos;s accelerate
             your online success!
           </p>
-          <Button
-            size="lg"
-            className="bg-green-600 hover:bg-green-500 text-white font-bold rounded-full text-lg"
-          >
-            Start Your Engines! <Zap className="ml-2 h-5 w-5" />
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              className="bg-green-600 hover:bg-green-500 text-white font-bold rounded-full text-lg"
+            >
+              Start Your Engines! <Zap className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </section>
       </main>
 

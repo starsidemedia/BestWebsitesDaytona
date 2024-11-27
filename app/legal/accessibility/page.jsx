@@ -112,12 +112,12 @@ export default function AccessibilityPolicy() {
 
           <p className="mb-6">
             To report an accessibility issue, please contact us at:{" "}
-            <a
+            <Link
               href="mailto:info@bestwebsitesdaytona.com"
               className="text-primary hover:underline"
             >
               info@bestwebsitesdaytona.com
-            </a>
+            </Link>
             .
           </p>
 
