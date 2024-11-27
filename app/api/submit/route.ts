@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   try {
     // Prepare email content
     const mailOptions = {
-      from: process.env.EMAIL_USERNANME,
+      from: process.env.EMAIL_USERNAME,
       to: process.env.EMAIL_RECIPIENT, // Send to yourself
       subject:
         type === "contact"

@@ -1,4 +1,5 @@
 import ContactComponent from "@/components/contact";
+
 export const metadata = {
   title: "Contact Us - Best Websites Daytona",
   description:
